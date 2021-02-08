@@ -592,6 +592,12 @@ workflows:
             - lint
             - typecheck
             - bootstrap
+      - unit_tests_node14:
+          <<: *ignore_docs
+          requires:
+            - lint
+            - typecheck
+            - bootstrap
       - integration_tests_long_term_caching:
           <<: *e2e-test-workflow
       - integration_tests_cache_resilience:
